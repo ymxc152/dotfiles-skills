@@ -20,16 +20,47 @@
 
 ```
 skills/
-├── engineering/          # 工程开发（TDD、诊断、原型、PRD、Issue 生成等）
-├── frontend/             # 前端开发（设计、UI 工程、测试）
-├── security/             # 安全（加固、Sharp Edges、变体分析）
-├── productivity/         # 生产力（Caveman、Handoff、Skill 编写等）
-├── misc/                 # 杂项（Pre-commit、Git Guardrails、PDF 等）
-├── writing/              # 写作（简洁写作、文章编辑）
-├── review/               # 代码审查与质量
-├── in-progress/          # 开发中/未完成技能
-├── personal/             # 个人使用（Karpathy 准则、Obsidian）
-└── deprecated/           # 已弃用技能（保留参考）
+├── caveman
+├── code-review-and-quality
+├── context-engineering
+├── design-an-interface
+├── diagnose
+├── edit-article
+├── frontend-design
+├── frontend-ui-engineering
+├── git-guardrails-claude-code
+├── grill-me
+├── grill-with-docs
+├── handoff
+├── improve-codebase-architecture
+├── karpathy-guidelines
+├── mcp-builder
+├── migrate-to-shoehorn
+├── obsidian-vault
+├── pdf
+├── performance-optimization
+├── prototype
+├── qa
+├── request-refactor-plan
+├── review
+├── scaffold-exercises
+├── security-and-hardening
+├── setup-matt-pocock-skills
+├── setup-pre-commit
+├── sharp-edges
+├── tdd
+├── to-issues
+├── to-prd
+├── triage
+├── ubiquitous-language
+├── variant-analysis
+├── webapp-testing
+├── write-a-skill
+├── write-concisely
+├── writing-beats
+├── writing-fragments
+├── writing-shape
+└── zoom-out
 ```
 
 ## 快速开始
@@ -43,8 +74,8 @@ cd ~/dotfiles-skills
 ```
 
 `install.sh` 会自动：
-1. 备份现有的 `~/.kimi/skills/` 到 `~/.kimi/skills-backup-YYYYMMDD-HHMMSS/`
-2. 用 `rsync` 将仓库中的技能复制到 `~/.kimi/skills/`
+1. 备份现有的 `~/.claude/skills/` 到 `~/.claude/skills-backup-YYYYMMDD-HHMMSS/`
+2. 用 `rsync` 将仓库中的技能复制到 `~/.claude/skills/`
 
 ### 编辑后反向同步
 
@@ -67,20 +98,20 @@ git push
 
 ```
 Machine A (编辑技能)
-  → ~/.kimi/skills/ 本地修改
+  → ~/.claude/skills/ 本地修改
   → ./update.sh 同步回仓库
   → git commit && git push
 
 Machine B (拉取更新)
   → git pull
   → ./install.sh
-  → ~/.kimi/skills/ 自动更新
+  → ~/.claude/skills/ 自动更新
 ```
 
 ## 添加新技能
 
-1. 在 `skills/<category>/` 下创建新目录，放入 `SKILL.md`
-2. 运行 `./update.sh` 或直接复制到 `~/.kimi/skills/` 测试
+1. 在 `skills/` 下创建新目录，放入 `SKILL.md`
+2. 运行 `./update.sh` 或直接复制到 `~/.claude/skills/` 测试
 3. 提交并推送
 
 ### SKILL.md 格式
@@ -111,7 +142,7 @@ description: 技能描述。在 [触发条件] 时使用。
 
 | 工具 | 扫描路径 |
 |------|---------|
-| Kimi CLI | `~/.kimi/skills/`（推荐）、`~/.config/agents/skills/` |
-| Claude Code | `~/.claude/skills/` |
+| Kimi CLI | `~/.kimi/skills/`、`~/.config/agents/skills/` |
+| Claude Code | `~/.claude/skills/`（推荐） |
 
-本仓库默认安装到 `~/.kimi/skills/`，Kimi 和 Claude 均可识别。
+本仓库默认安装到 `~/.claude/skills/`。

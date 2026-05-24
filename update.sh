@@ -1,11 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
-# Reverse sync: copy changes from ~/.kimi/skills/ back to this repo
+# Reverse sync: copy changes from ~/.claude/skills/ back to this repo
 # Use this after you edit skills locally and want to commit the changes.
 
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
-SKILLS_SRC="${HOME}/.kimi/skills"
+SKILLS_SRC="${HOME}/.claude/skills"
 SKILLS_DEST="$REPO_DIR/skills"
 
 # Colors

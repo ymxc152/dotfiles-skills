@@ -2,12 +2,12 @@
 set -euo pipefail
 
 # dotfiles-skills installer
-# Symlinks all skills from this repo to ~/.kimi/skills/
+# Symlinks all skills from this repo to ~/.claude/skills/
 
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
 SKILLS_SRC="$REPO_DIR/skills"
-SKILLS_DEST="${HOME}/.kimi/skills"
-BACKUP_DIR="${HOME}/.kimi/skills-backup-$(date +%Y%m%d-%H%M%S)"
+SKILLS_DEST="${HOME}/.claude/skills"
+BACKUP_DIR="${HOME}/.claude/skills-backup-$(date +%Y%m%d-%H%M%S)"
 
 # Colors
 RED='\033[0;31m'
